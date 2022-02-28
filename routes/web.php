@@ -9,3 +9,5 @@ Route::get('/home', [home3controller::class, 'index']);
 Route::prefix('category')->group(function(){
     Route::get('/{id}', [ProductController::class, 'product']);
 });
+
+Route::get('/news/{id?}', [NewsController::class, 'news']);
