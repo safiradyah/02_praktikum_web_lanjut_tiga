@@ -11,3 +11,7 @@ Route::prefix('category')->group(function(){
 });
 
 Route::get('/news/{id?}', [NewsController::class, 'news']);
+
+Route::prefix('program')->group(function(){
+    Route::get('/{id}', [ProgramController::class, 'program']);
+});
